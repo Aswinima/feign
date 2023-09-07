@@ -33,6 +33,7 @@ public class ExceptionUtils {
     }
     Throwable rootCause = throwable;
     // this is to avoid infinite loops for recursive cases
+    //I have added just this comment for the practice pupose.
     final Set<Throwable> seenThrowables = new HashSet<>();
     seenThrowables.add(rootCause);
     while ((rootCause.getCause() != null && !seenThrowables.contains(rootCause.getCause()))) {
